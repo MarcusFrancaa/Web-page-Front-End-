@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/stylepag.css">
+</head>
+
+<body>
+    <div class="p-1 text-white text-center background_cabeçalho">
+        <h1>Curso Front End</h1>
+        <p>Menu de interação</p>
+    </div>
+
+    <nav class="navbar navbar-expand-sm background_color-navbar">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contatos.html">CONTATOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="novocontato.html">NOVO CONTATO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="curriculo.html">CURRÍCULO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Cadastro de contatos</h1>
+        <form id="Form" method="post">
+            <div class="row">
+                <div id="div-nome" class="col-sm-6 ">
+                    <label for="Nome">Nome completo</label>
+                    <input type="text" id="nome"  placeholder="Informe seu nome" maxlength="100"
+                        class="form-control required"  oninput="namevalidate()"> <span class="span-required"> O nome deve conter apenas letras e mais de 4 caracteres
+                        </span>
+
+                </div>
+                <div id="div-cpf" class="col-sm-3 ">
+                    <label for="Cpf">Cpf:</label><br>
+                    <input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx" maxlength="14"
+                    class="form-control required" oninput="cpfvalidate()"> <span class="span-required"> O cpf deve estar de acordo com o padrão </span>
+
+                </div>
+                <div id="div-idade" class="col-sm-3">
+
+                    <label for="Idade"> Data de nascimento </label><br>
+                    <input type="date" id="idade" placeholder="xx/xx/xx" class="form-control"> <br>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div id="div-cnpj" class="col-sm-4 ">
+                    <label for="cnpj">Cnpj</label>
+                    <input type="text" id="cnpj" placeholder="Informe seu Cnpj, se houver" maxlength="14"
+                        class="form-control">
+                </div>
+
+                <div id="div-rg" class="col-sm-4">
+                    <label for="rg">Rg</label>
+                    <input type="text" id="rg" name="rg" placeholder="Informe seu RG" maxlength="10"
+                        class="form-control">
+                </div>
+                <div id="div-email" class="col-sm-4">
+
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="exemplo@email.com" id="email" name="email" 
+                     oninput="emailvalidate()" class="form-control required">
+                    <span class="span-required"> Email Inválido</span>
+
+                </div>
+            </div>
+
+            <div id="div-UF" class="row mt-3">
+                <div class="col-sm-4" class="form-control">
+                    <label for="UF">UF</label><br>
+                    <select class="form-control" aria-placeholder="" name="ID">
+                        <option value="AL"> Alagoas</option>
+                        <option value="PE"> Pernambuco</option>
+                        <option value="CE"> Ceará</option>
+                        <option value="BA"> Bahia</option>
+                        <option value="PB"> Paraíba</option>
+                        <option value="MA"> Maranhão</option>
+                        <option value="PI"> Piauí</option>
+                        <option value="RN"> Rio Grande do Norte</option>
+                        <option value="SE"> Sergipe</option>
+
+                    </select>
+                </div>
+                <div id="div-Telefone" class="col-sm-4">
+                    <label for="Telefone">Telefone</label><br>
+                    <input type="text" minlength="11" maxlength="16" placeholder="(xx)x xxxx-xxxx" 
+                    oninput="phonevalidate()" class="form-control required" >
+                    <span class="span-required">Telefone deve conter 11 números</span>
+                </div>
+                <div id="div-sexo" class="col-sm-3">
+                    <p>Escolha o sexo de nascimento </p>
+                    <input type="radio" id="Masculino" name="sexo" value="Masculino">
+                    <label for="Masculino"> Masculino </label>
+                    <br>
+
+                    <input type="radio" id="Feminino" name="sexo" value="Feminino">
+                    <label for="Feminino"> Feminino </label>
+                    <br>
+
+                    <input type="radio" id="Não informado" name="sexo" value="Não informado">
+                    <label for="Não informado">Não informado</label>
+                    <br>
+
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div id="div-Fale sobre você" class="col-sm-12">
+                    <label for="Fale sobre você"> Fale sobre você</label><br>
+                    <textarea name="Fale sobre você" id="Fale sobre você" rows="5" cols="30"
+                        class="form-control">  </textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="Enviar"></label>
+                    <input type="button" id="Enviar" class="btn btn-primary" value="Enviar" >
+                    
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                    <div class="alert alert-warning" id="mensagem_erro" style="display: none;">
+                        <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+    </form>
+    <script src="js/validate.js" defer></script>
+</body>
+
+</html>

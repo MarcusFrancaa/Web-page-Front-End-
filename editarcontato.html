@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body >
+    <div class="p-1 text-white text-center background_cabeçalho">
+        <h1>Curso Front End</h1>
+        <p>Menu de interação</p> 
+      </div>
+      
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contatos.html">CONTATOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="novocontato.html">NOVO CONTATO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="curriculo.html">CURRÍCULO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Cadastro de clientes</h1>
+        <form method="post">
+            <div class="row mb-3">
+                <div id="nome" class="col-sm-6 ">
+                    <label for="Nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Informe seu nome" maxlength="100"
+                        class="form-control" value="João">
+
+                </div>
+                <div id="Cpf" class="col-sm-3 ">
+                    <label for="Cpf">Cpf:</label><br>
+                    <input type="text" id="Cpf" name="Cpf" placeholder="xxx.xxx.xxx-xx" maxlength="11"
+                        class="form-control" value="222.333.444.555-88">
+ 
+                </div>
+                <div id="idade" class="col-sm-3">
+
+                    <label for="Idade"> Data de nascimento </label><br>
+                    <input type="date" id="idade" name="idade" placeholder="xx/xx/xx" class="form-control"> <br>
+
+                </div>
+
+            </div>
+
+            <div id="div_cpf_cnpj_email" class="row mb-3 mt-3">
+
+                <div class="col-sm-4 ">
+                    <label for="cnpj">Cnpj</label>
+                    <input type="text" id="cnpj" name="cnpj" placeholder="Informe seu Cnpj, se houver" maxlength="14"
+                        class="form-control" value="11111111111111">
+                </div>
+
+                <div class="col-sm-4">
+                    <label for="rg">Rg</label>
+                    <input type="text" id="rg" name="rg" placeholder="Informe seu RG" maxlength="10"
+                        class="form-control" value="35353535">
+                </div>
+                <div class="col-sm-4">
+                    <div id="email">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="exemplo@email.com" id="email" name="email"
+                            class="form-control" value="joao132@gmail.com">
+                    </div>
+                </div>
+            </div>
+
+            <div id="sexo_uf_Telefone" class="row mb-3 mt-5">
+                <div class="col-sm-4" class="form-control">
+                    <label for="UF">UF</label><br>
+                    <select class="form-control" aria-placeholder="" name="ID">
+                        <option value="AL" selected> Alagoas</option>
+                        <option value="PE"> Pernambuco</option>
+                        <option value="CE"> Ceará</option>
+                        <option value="BA"> Bahia</option>
+                        <option value="PB"> Paraíba</option>
+                        <option value="MA"> Maranhão</option>
+                        <option value="PI"> Piauí</option>
+                        <option value="RN"> Rio Grande do Norte</option>
+                        <option value="SE"> Sergipe</option>
+
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <label for="Telefone">Telefone</label><br>
+                    <input type="text" maxlength="11" placeholder="(xx)x xxxx-xxxx" class="form-control" value="81988554422">
+                </div>
+                <div class="col-sm-3">
+                    <p>Escolha o sexo de nascimento </p>
+                    <input type="radio" id="Masculino" name="sexo" checked value="Masculino">
+                    <label for="Masculino"> Masculino </label>
+                    <br>
+
+                    <input type="radio" id="Feminino" name="sexo" value="Feminino">
+                    <label for="Feminino"> Feminino </label>
+                    <br>
+
+                    <input type="radio" id="Não informado" name="sexo" value="Não informado">
+                    <label for="Não informado">Não informado</label>
+                    <br>
+
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div id="Fale sobre você" class="col-sm-12">
+                    <label for="Fale sobre você"> Fale sobre você</label><br>
+                    <textarea name="Fale sobre você" id="Fale sobre você" rows="5" cols="30"
+                        class="form-control">  </textarea>
+                </div>
+            </div>
+
+            <div id="Enviar">
+                <label for="Enviar"></label>
+                <input type="submit" value="Enviar">
+            </div><br>
+            
+    </div>
+
+
+
+
+
+    </form>
+</body>
+
+</html>

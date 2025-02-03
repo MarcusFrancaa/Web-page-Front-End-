@@ -1,0 +1,32 @@
+
+    .background_cabeçalho{
+      background-color:#1c3d4d;
+      font-family: xilosia;
+    }
+    .background_color-navbar{
+      background-color: #f6e7d3;
+      font-family: xilosia;
+      
+
+    }
+
+    .background_title{
+      background-color: #f6e7d3;
+      font-family: xilosia;
+      text-align: center;
+      
+
+    }
+
+    .cabeçalho{
+      text-align: center;
+      font-size: medium;
+    }
+
+    .span-required{
+      display: none;
+      font-size: 15px;
+      margin: 3px 0 0 1px;
+      color: red;
+    }
+  
